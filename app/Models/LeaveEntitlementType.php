@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Designation extends Model
+class LeaveEntitlementType extends Model
 {
     use HasFactory;
 
@@ -19,8 +19,8 @@ class Designation extends Model
         'title',
     ];
 
-    public function users(): HasMany
+    public function leaveEntitlement(): HasMany
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(LeaveEntitlement::class);
     }
 }

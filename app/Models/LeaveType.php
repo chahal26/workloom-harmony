@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Designation extends Model
+class LeaveType extends Model
 {
     use HasFactory;
 
@@ -16,11 +16,12 @@ class Designation extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'title',
+        'name',
+        'max_holidays',
     ];
 
-    public function users(): HasMany
+    public function leaveRequests(): HasMany
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(LeaveRequest::class);
     }
 }

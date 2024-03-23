@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'designation_id' => 1,
             'first_name' => 'Sahil',
             'last_name' => 'Chahal',
-            'email' => 'dev.sahilchahal1@gmail.com',
+            'email' => 'dev.sahilchahal@gmail.com',
             'password' => \Hash::make('Sahil@123'),
         ]);
     }

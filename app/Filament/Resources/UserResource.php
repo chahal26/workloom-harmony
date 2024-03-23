@@ -30,6 +30,11 @@ class UserResource extends Resource
                     ->label('Designation')
                     ->options(Designation::all()->pluck('title', 'id'))
                     ->searchable(),
+                Forms\Components\Select::make('roles')
+                    ->relationship('roles', 'name')
+                    ->multiple()
+                    ->preload()
+                    ->searchable(),
                 Forms\Components\TextInput::make('first_name')
                     ->required()
                     ->maxLength(255),
